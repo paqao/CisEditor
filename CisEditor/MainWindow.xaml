@@ -3,6 +3,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <MenuItem Header="Plik" >
+                <MenuItem Header="Projekt">
+                    <MenuItem Header="Nowy"/>
+                    <MenuItem Header="Zapisz"/>
+                    <MenuItem Header="Wczytaj"/>
+                </MenuItem>
+                <MenuItem Header="Plik">
+                    <MenuItem Header="Nowy"/>
+                    <MenuItem Header="Zapisz"/>
+                    <MenuItem Header="Wczytaj"/>
+                </MenuItem>
+                <MenuItem Header="Close" Click="MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
